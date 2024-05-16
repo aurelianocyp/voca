@@ -54,6 +54,7 @@ The requirements (including tensorflow) can be installed using:
 ```
 pip install -r requirements.txt
 ```
+安装时先注释掉OpenCV-python，然后从网盘里下载whl文件安装。因为3.6安装OpenCV很难受。
 
 Install mesh processing libraries from [MPI-IS/mesh](https://github.com/MPI-IS/mesh) within the virtual environment.
 
