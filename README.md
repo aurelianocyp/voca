@@ -58,6 +58,16 @@ pip install -r requirements.txt
 
 Install mesh processing libraries from [MPI-IS/mesh](https://github.com/MPI-IS/mesh) within the virtual environment.
 
+- sudo apt update
+- sudo apt-get install libboost-dev
+- git clone https://github.com/MPI-IS/mesh.git
+- cd mesh
+- python -m pip install pip==22.2.1
+- BOOST_INCLUDE_DIRS=/path/to/boost/include make all
+- make tests
+- 如果test时输出为OK (skipped=5)，应该就行了
+- 换了conda环境后要重新libboost-dev
+
 ## Data
 
 #### Data to run the demo 
