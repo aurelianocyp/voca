@@ -2,38 +2,14 @@
 
 ## Set-up
 
-The code uses Python 3.6.8 and it was tested on Tensorflow 1.14.0.
+The code uses Python 3.7.16 and it was tested on tensorflow-gpu 1.15.2.
 ```
-sudo apt-get install python3-pip python3-venv
 sudo apt install ffmpeg
 git clone https://github.com/aurelianocyp/voca.git
-```
-
-Set up virtual environment:
-```
-mkdir <your_home_dir>/.virtualenvs
-python3 -m venv <your_home_dir>/.virtualenvs/voca
-```
-
-Activate virtual environment:
-```
-cd voca
-source <your_home_dir>/voca/bin/activate
-```
-
-Make sure your pip version is up-to-date:
-```
-pip install -U pip
-```
-
-The requirements (including tensorflow) can be installed using:
-```
 pip install -r requirements.txt
 ```
-安装时先注释掉OpenCV-python，然后从网盘里下载whl文件安装。因为3.6安装OpenCV很难受。
 
 Install mesh processing libraries from [MPI-IS/mesh](https://github.com/MPI-IS/mesh) within the virtual environment.
-
 - sudo apt update
 - sudo apt-get install libboost-dev
 - git clone https://github.com/MPI-IS/mesh.git
@@ -43,13 +19,14 @@ Install mesh processing libraries from [MPI-IS/mesh](https://github.com/MPI-IS/m
 - make tests
 - 如果test时输出为OK (skipped=5)，应该就行了
 - 换了conda环境后要重新libboost-dev
+- 最好把mesh的requirement里全注释掉
 
 ## Data
 
 #### Data to run the demo 
 
 Download the trained VOCA model, audio sequences, and template meshes from [MPI-IS/VOCA](https://voca.is.tue.mpg.de).<br/>
-Download FLAME model from [MPI-IS/FLAME](http://flame.is.tue.mpg.de/).<br/>
+Download FLAME model from [MPI-IS/FLAME](http://flame.is.tue.mpg.de/).<br/> 将这里面的output_graph.pb放入ds graph文件夹
 Download the trained DeepSpeech model (v0.1.0) from [Mozilla/DeepSpeech](https://github.com/mozilla/DeepSpeech/releases/tag/v0.1.0) (i.e. deepspeech-0.1.0-models.tar.gz).
 
 #### Data used to train VOCA
