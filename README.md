@@ -2,7 +2,7 @@
 
 ## Set-up
 
-The code uses Python 3.7.16 and it was tested on tensorflow-gpu 1.15.2.
+The code uses Python 3.7.16 and it was tested on tensorflow-gpu 1.15.2. 3090
 ```
 sudo apt install ffmpeg
 git clone https://github.com/aurelianocyp/voca.git
