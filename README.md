@@ -2,10 +2,15 @@
 
 ## Set-up
 
-The code uses Python 3.7.16 and it was tested on tensorflow-gpu 1.15.2. 3090
+Python 3.7.16 
+
+tensorflow-gpu 1.15.2. 
+
+RTX 3090
 ```
+conda create -n voca python=3.7
+conda activate voca
 sudo apt install ffmpeg
-git clone https://github.com/aurelianocyp/voca.git
 pip install -r requirements.txt
 ```
 
@@ -25,14 +30,13 @@ Install mesh processing libraries from [MPI-IS/mesh](https://github.com/MPI-IS/m
 
 #### Data to run the demo 
 
-Download the trained VOCA model, audio sequences, and template meshes from [MPI-IS/VOCA](https://voca.is.tue.mpg.de).<br/>
-Download FLAME model from [MPI-IS/FLAME](http://flame.is.tue.mpg.de/).<br/> 将这里面的output_graph.pb放入ds graph文件夹
+Download the trained VOCA model, audio sequences, and template meshes from [MPI-IS/VOCA](https://voca.is.tue.mpg.de).
+
+Download FLAME model from [MPI-IS/FLAME](http://flame.is.tue.mpg.de/). 将这里面的output_graph.pb放入ds graph文件夹
+
 Download the trained DeepSpeech model (v0.1.0) from [Mozilla/DeepSpeech](https://github.com/mozilla/DeepSpeech/releases/tag/v0.1.0) (i.e. deepspeech-0.1.0-models.tar.gz).
 
 #### Data used to train VOCA
-
-VOCA is trained on VOCASET, a unique 4D face dataset with about 29 minutes of 4D scans captured at 60 fps and synchronized audio from 12 speakers that can be downloaded at [MPI-IS/VOCASET](https://voca.is.tue.mpg.de). 
-
 Training subjects:
 ```
 FaceTalk_170728_03272_TA, FaceTalk_170904_00128_TA, FaceTalk_170725_00137_TA, FaceTalk_170915_00223_TA, FaceTalk_170811_03274_TA, FaceTalk_170913_03279_TA, FaceTalk_170904_03276_TA, FaceTalk_170912_03278_TA
